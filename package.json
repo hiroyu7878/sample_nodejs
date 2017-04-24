@@ -1,0 +1,16 @@
+{
+  "name": "nodejs_sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -R spec test.js",
+    "cover": "istanbul cover _mocha"
+  },
+  "devDependencies": {
+    "istanbul": "^0.4.5",
+    "mocha": "~1.7.4"
+  },
+  "author": "",
+  "license": "ISC"
+}

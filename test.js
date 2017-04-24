@@ -1,0 +1,24 @@
+var assert = require('assert');
+var myModule = require('./myModule');
+ 
+before(function (done) {
+    console.log('[describe]before test')
+    done();
+});
+ 
+describe('myModule', function () {
+    describe('greet', function () {
+        it('引数に応じて決まった文字列を返すこと', function () {
+            assert.equal(myModule.greet('taro'), 'Hello,taro');
+        });
+    });
+ 
+    describe('greetAsync', function () {
+        it('引数に応じてコールバック内で決まった文字列になること', function (done) {
+            myModule.greetAsync('hanako', function (greet) {
+                assert.equal(greet, 'Hello,hanako');
+                done();
+            });
+        });
+    });
+});
